@@ -6,11 +6,34 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		DBE3235F2819AD1C006DE169 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBE3235B2819AD1B006DE169 /* TextBook_MarketPlace.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DBE3234A2819AD14006DE169;
+			remoteInfo = TextBook_MarketPlace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DBE3235B2819AD1B006DE169 /* TextBook_MarketPlace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TextBook_MarketPlace.xcodeproj; path = TextBook_MarketPlace/TextBook_MarketPlace.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		DBE3233A2819ACD2006DE169 = {
 			isa = PBXGroup;
 			children = (
+				DBE3235B2819AD1B006DE169 /* TextBook_MarketPlace.xcodeproj */,
 			);
+			sourceTree = "<group>";
+		};
+		DBE3235C2819AD1B006DE169 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBE323602819AD1C006DE169 /* TextBook_MarketPlace.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -32,11 +55,27 @@
 			);
 			mainGroup = DBE3233A2819ACD2006DE169;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DBE3235C2819AD1B006DE169 /* Products */;
+					ProjectRef = DBE3235B2819AD1B006DE169 /* TextBook_MarketPlace.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DBE323602819AD1C006DE169 /* TextBook_MarketPlace.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TextBook_MarketPlace.app;
+			remoteRef = DBE3235F2819AD1C006DE169 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		DBE3233F2819ACD3006DE169 /* Debug */ = {
