@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SellBookView: View {
     @State var newTitle: String = ""
     @State var newPrice: String = ""
     @State var newDept: String = ""
     @State var newCourseNum: String = ""
+    @ObservedObject var bookStore = BookListingVM()
     
     var body: some View {
 
@@ -27,7 +29,16 @@ struct SellBookView: View {
                 TextField("Enter CourseNum", text: $newCourseNum)
                     .textFieldStyle(.roundedBorder)
                 
-                Button(action: {}){
+                Button(action: {
+                    let book = BookModel(title: newTitle, price: Double(newPrice) ?? 0.0, department: newDept, courseCode: newCourseNum)
+                    
+                    bookStore.addBook(book: book)
+                    
+                    newTitle = ""
+                    newPrice = ""
+                    newDept = ""
+                    newCourseNum = ""
+                }){
                     HStack{
                     Image(systemName: "plus.circle.fill")
                             .resizable()

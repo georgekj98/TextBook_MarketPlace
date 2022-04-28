@@ -6,13 +6,22 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
+import SwiftUI
 
-struct BookModel: Hashable {
-    var id: String = UUID().uuidString
+struct BookModel: Hashable, Identifiable, Codable {
+    @DocumentID var id: String? = UUID().uuidString
     var title: String
     var price: Double
     var department: String
     var courseCode: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case price
+        case department
+        case courseCode
+    }
     
 }
 

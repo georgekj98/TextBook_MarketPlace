@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class BookListingVM: ObservableObject {
     
@@ -14,6 +15,17 @@ class BookListingVM: ObservableObject {
     @Published var bookList = [BookModel]()
     
     private var db = Firestore.firestore()
+    
+    
+    func addBook(book: BookModel){
+        
+        do{
+            let _ = try db.collection("books").addDocument(from: book)
+        }
+        catch {
+            print(error)
+        }
+    }
     
     
     func fetchAllData() {
