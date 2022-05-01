@@ -54,6 +54,9 @@
 				Base,
 			);
 			mainGroup = DBE3233A2819ACD2006DE169;
+			packageReferences = (
+				DBE323D2281DF519006DE169 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -103,6 +106,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBE323D2281DF519006DE169 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = DBE3233B2819ACD2006DE169 /* Project object */;
 }

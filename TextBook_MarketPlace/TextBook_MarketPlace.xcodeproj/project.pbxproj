@@ -20,6 +20,10 @@
 		DBE323752819ED3A006DE169 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBE323742819ED3A006DE169 /* FirebaseFirestore */; };
 		DBE323772819ED3A006DE169 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = DBE323762819ED3A006DE169 /* FirebaseFirestoreSwift-Beta */; };
 		DBE323792819ED3A006DE169 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DBE323782819ED3A006DE169 /* FirebaseStorage */; };
+		DBE323D1281DDC2E006DE169 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE323D0281DDC2D006DE169 /* LoginView.swift */; };
+		DBE323D6281DF767006DE169 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DBE323D5281DF767006DE169 /* GoogleSignIn */; };
+		DBE323D9281E0609006DE169 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE323D8281E0609006DE169 /* SignUpVM.swift */; };
+		DBE323DC281E0922006DE169 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE323DB281E0922006DE169 /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		DBE323672819B559006DE169 /* BookListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListingView.swift; sourceTree = "<group>"; };
 		DBE3236A2819CCEC006DE169 /* BookListingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListingVM.swift; sourceTree = "<group>"; };
 		DBE3236E2819E850006DE169 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DBE323D0281DDC2D006DE169 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DBE323D7281E05E0006DE169 /* TextBook-MarketPlace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TextBook-MarketPlace-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DBE323D8281E0609006DE169 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
+		DBE323DB281E0922006DE169 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE323D6281DF767006DE169 /* GoogleSignIn in Frameworks */,
 				DBE323772819ED3A006DE169 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				DBE323792819ED3A006DE169 /* FirebaseStorage in Frameworks */,
 				DBE323732819ED3A006DE169 /* FirebaseAuth in Frameworks */,
@@ -69,6 +78,8 @@
 		DBE3234C2819AD14006DE169 /* TextBook_MarketPlace */ = {
 			isa = PBXGroup;
 			children = (
+				DBE323DA281E0907006DE169 /* Utilities */,
+				DBE323D7281E05E0006DE169 /* TextBook-MarketPlace-Info.plist */,
 				DBE323692819CBC7006DE169 /* ViewModels */,
 				DBE323642819B182006DE169 /* Views */,
 				DBE323612819AE49006DE169 /* Models */,
@@ -102,6 +113,7 @@
 			children = (
 				DBE323652819B19A006DE169 /* SellBookView.swift */,
 				DBE323672819B559006DE169 /* BookListingView.swift */,
+				DBE323D0281DDC2D006DE169 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,8 +122,17 @@
 			isa = PBXGroup;
 			children = (
 				DBE3236A2819CCEC006DE169 /* BookListingVM.swift */,
+				DBE323D8281E0609006DE169 /* SignUpVM.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DBE323DA281E0907006DE169 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DBE323DB281E0922006DE169 /* Application.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +156,7 @@
 				DBE323742819ED3A006DE169 /* FirebaseFirestore */,
 				DBE323762819ED3A006DE169 /* FirebaseFirestoreSwift-Beta */,
 				DBE323782819ED3A006DE169 /* FirebaseStorage */,
+				DBE323D5281DF767006DE169 /* GoogleSignIn */,
 			);
 			productName = TextBook_MarketPlace;
 			productReference = DBE3234A2819AD14006DE169 /* TextBook_MarketPlace.app */;
@@ -166,6 +188,7 @@
 			mainGroup = DBE323412819AD14006DE169;
 			packageReferences = (
 				DBE323712819ED3A006DE169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DBE323D4281DF767006DE169 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = DBE3234B2819AD14006DE169 /* Products */;
 			projectDirPath = "";
@@ -194,9 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE323DC281E0922006DE169 /* Application.swift in Sources */,
 				DBE3236B2819CCEC006DE169 /* BookListingVM.swift in Sources */,
+				DBE323D1281DDC2E006DE169 /* LoginView.swift in Sources */,
 				DBE323682819B559006DE169 /* BookListingView.swift in Sources */,
 				DBE323632819AE65006DE169 /* BookModel.swift in Sources */,
+				DBE323D9281E0609006DE169 /* SignUpVM.swift in Sources */,
 				DBE323502819AD14006DE169 /* ContentView.swift in Sources */,
 				DBE3234E2819AD14006DE169 /* TextBook_MarketPlaceApp.swift in Sources */,
 				DBE323662819B19A006DE169 /* SellBookView.swift in Sources */,
@@ -333,6 +359,7 @@
 				DEVELOPMENT_TEAM = R56FTPF4P4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TextBook-MarketPlace-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -362,6 +389,7 @@
 				DEVELOPMENT_TEAM = R56FTPF4P4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TextBook-MarketPlace-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -412,6 +440,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		DBE323D4281DF767006DE169 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -434,6 +470,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DBE323712819ED3A006DE169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		DBE323D5281DF767006DE169 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBE323D4281DF767006DE169 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
