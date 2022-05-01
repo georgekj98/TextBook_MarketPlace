@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var signUpVM: SignUpViewModel
+    
     var body: some View {
-        TabView{
-            BookListingView()
-                .tabItem{
-                    Label("Buy book", systemImage: "book")
-                }
-            
-            SellBookView()
-                .tabItem{
-                    Label("Sell Book", systemImage: "plus")
-                }
+        NavigationView {
+            if signUpVM.isLogin {
+                TabControlView()
+                    .environmentObject(signUpVM)
+            }
+            else {
+                LoginView()
+                    .environmentObject(signUpVM)
+            }
         }
+
     }
 }
 

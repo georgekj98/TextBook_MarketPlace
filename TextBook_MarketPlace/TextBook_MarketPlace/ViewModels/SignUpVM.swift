@@ -13,6 +13,25 @@ class SignUpViewModel: ObservableObject {
     
     @Published var isLogin: Bool = false
     
+    func signOutGoogle(){
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            isLogin.toggle()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+        
+    }
+    
+    
+    func getUserID() -> String {
+        let firebaseAuth = Auth.auth()
+        let uid = firebaseAuth.currentUser?.uid ?? "Unknown"
+        return uid
+    }
+    
+    
     func signUpWithGoogle() {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
 
@@ -36,6 +55,7 @@ class SignUpViewModel: ObservableObject {
 
           let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                          accessToken: authentication.accessToken)
+//            Auth.auth().currentUser?.uid
 
             Auth.auth().signIn(with: credential) { result, error in
                 

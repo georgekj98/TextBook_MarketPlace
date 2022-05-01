@@ -20,11 +20,12 @@ struct TextBook_MarketPlaceApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .preferredColorScheme(.dark)
-            LoginView()
-                .environmentObject(SignUpViewModel())
+            ContentView()
                 .preferredColorScheme(.dark)
+                .environmentObject(SignUpViewModel())
+//            LoginView()
+//                .environmentObject(SignUpViewModel())
+//                .preferredColorScheme(.dark)
             
         }
     }

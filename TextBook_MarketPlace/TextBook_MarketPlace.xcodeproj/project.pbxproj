@@ -24,6 +24,8 @@
 		DBE323D6281DF767006DE169 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DBE323D5281DF767006DE169 /* GoogleSignIn */; };
 		DBE323D9281E0609006DE169 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE323D8281E0609006DE169 /* SignUpVM.swift */; };
 		DBE323DC281E0922006DE169 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE323DB281E0922006DE169 /* Application.swift */; };
+		DBE323DE281E1384006DE169 /* TabControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE323DD281E1384006DE169 /* TabControlView.swift */; };
+		DBE323E0281E2487006DE169 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE323DF281E2487006DE169 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		DBE323D7281E05E0006DE169 /* TextBook-MarketPlace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TextBook-MarketPlace-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DBE323D8281E0609006DE169 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		DBE323DB281E0922006DE169 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		DBE323DD281E1384006DE169 /* TabControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControlView.swift; sourceTree = "<group>"; };
+		DBE323DF281E2487006DE169 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				DBE323652819B19A006DE169 /* SellBookView.swift */,
 				DBE323672819B559006DE169 /* BookListingView.swift */,
 				DBE323D0281DDC2D006DE169 /* LoginView.swift */,
+				DBE323DD281E1384006DE169 /* TabControlView.swift */,
+				DBE323DF281E2487006DE169 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,9 +229,11 @@
 				DBE323682819B559006DE169 /* BookListingView.swift in Sources */,
 				DBE323632819AE65006DE169 /* BookModel.swift in Sources */,
 				DBE323D9281E0609006DE169 /* SignUpVM.swift in Sources */,
+				DBE323DE281E1384006DE169 /* TabControlView.swift in Sources */,
 				DBE323502819AD14006DE169 /* ContentView.swift in Sources */,
 				DBE3234E2819AD14006DE169 /* TextBook_MarketPlaceApp.swift in Sources */,
 				DBE323662819B19A006DE169 /* SellBookView.swift in Sources */,
+				DBE323E0281E2487006DE169 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
