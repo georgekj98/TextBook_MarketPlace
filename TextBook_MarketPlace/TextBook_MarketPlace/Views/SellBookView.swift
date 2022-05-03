@@ -14,6 +14,7 @@ struct SellBookView: View {
     @State var newDept: String = ""
     @State var newCourseNum: String = ""
     @ObservedObject var bookStore = BookListingVM()
+    @EnvironmentObject var signUpVM: SignUpViewModel
     
     var body: some View {
 
@@ -30,7 +31,7 @@ struct SellBookView: View {
                     .textFieldStyle(.roundedBorder)
                 
                 Button(action: {
-                    let book = BookModel(title: newTitle, price: Double(newPrice) ?? 0.0, department: newDept, courseCode: newCourseNum)
+                    let book = BookModel(title: newTitle, price: Double(newPrice) ?? 0.0, department: newDept, courseCode: newCourseNum, userID: signUpVM.getUserID())
                     
                     bookStore.addBook(book: book)
                     

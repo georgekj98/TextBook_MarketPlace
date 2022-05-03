@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB069055282197D800DD102F /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB069054282197D800DD102F /* FilterView.swift */; };
 		DBE3234E2819AD14006DE169 /* TextBook_MarketPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE3234D2819AD14006DE169 /* TextBook_MarketPlaceApp.swift */; };
 		DBE323502819AD14006DE169 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE3234F2819AD14006DE169 /* ContentView.swift */; };
 		DBE323522819AD1B006DE169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE323512819AD1B006DE169 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB069054282197D800DD102F /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		DBE3234A2819AD14006DE169 /* TextBook_MarketPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextBook_MarketPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE3234D2819AD14006DE169 /* TextBook_MarketPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBook_MarketPlaceApp.swift; sourceTree = "<group>"; };
 		DBE3234F2819AD14006DE169 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				DBE323D0281DDC2D006DE169 /* LoginView.swift */,
 				DBE323DD281E1384006DE169 /* TabControlView.swift */,
 				DBE323DF281E2487006DE169 /* SettingsView.swift */,
+				DB069054282197D800DD102F /* FilterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				DBE3236B2819CCEC006DE169 /* BookListingVM.swift in Sources */,
 				DBE323D1281DDC2E006DE169 /* LoginView.swift in Sources */,
 				DBE323682819B559006DE169 /* BookListingView.swift in Sources */,
+				DB069055282197D800DD102F /* FilterView.swift in Sources */,
 				DBE323632819AE65006DE169 /* BookModel.swift in Sources */,
 				DBE323D9281E0609006DE169 /* SignUpVM.swift in Sources */,
 				DBE323DE281E1384006DE169 /* TabControlView.swift in Sources */,

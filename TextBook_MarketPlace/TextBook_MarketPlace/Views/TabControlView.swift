@@ -17,6 +17,7 @@ struct TabControlView: View {
                 }
             
             SellBookView()
+                .environmentObject(signUpVM)
                 .tabItem{
                     Label("Sell Book", systemImage: "plus")
                 }

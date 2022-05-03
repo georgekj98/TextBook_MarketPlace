@@ -42,9 +42,10 @@ class BookListingVM: ObservableObject {
                 let price = data["price"] as? Double ?? 0.0
                 let department = data["department"] as? String ?? ""
                 let courseCode = data["courseCode"] as? String ?? ""
+                let userID = data["userID"] as? String ?? ""
                 
                 
-                return BookModel(id: .init(), title: title, price: price, department: department, courseCode: courseCode)
+                return BookModel(id: .init(), title: title, price: price, department: department, courseCode: courseCode, userID: userID)
                 
             }
             
