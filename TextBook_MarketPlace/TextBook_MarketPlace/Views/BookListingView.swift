@@ -26,5 +26,6 @@ struct BookListingView: View {
 struct BookListingView_Previews: PreviewProvider {
     static var previews: some View {
         BookListingView()
+            .preferredColorScheme(.dark)
     }
 }

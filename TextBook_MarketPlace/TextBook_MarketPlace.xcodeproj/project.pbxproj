@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB069055282197D800DD102F /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB069054282197D800DD102F /* FilterView.swift */; };
+		DB0690572821B54F00DD102F /* FilterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0690562821B54E00DD102F /* FilterVM.swift */; };
 		DBE3234E2819AD14006DE169 /* TextBook_MarketPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE3234D2819AD14006DE169 /* TextBook_MarketPlaceApp.swift */; };
 		DBE323502819AD14006DE169 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE3234F2819AD14006DE169 /* ContentView.swift */; };
 		DBE323522819AD1B006DE169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE323512819AD1B006DE169 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		DB069054282197D800DD102F /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		DB0690562821B54E00DD102F /* FilterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVM.swift; sourceTree = "<group>"; };
 		DBE3234A2819AD14006DE169 /* TextBook_MarketPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextBook_MarketPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE3234D2819AD14006DE169 /* TextBook_MarketPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBook_MarketPlaceApp.swift; sourceTree = "<group>"; };
 		DBE3234F2819AD14006DE169 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				DBE3236A2819CCEC006DE169 /* BookListingVM.swift */,
 				DBE323D8281E0609006DE169 /* SignUpVM.swift */,
+				DB0690562821B54E00DD102F /* FilterVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				DBE323DE281E1384006DE169 /* TabControlView.swift in Sources */,
 				DBE323502819AD14006DE169 /* ContentView.swift in Sources */,
 				DBE3234E2819AD14006DE169 /* TextBook_MarketPlaceApp.swift in Sources */,
+				DB0690572821B54F00DD102F /* FilterVM.swift in Sources */,
 				DBE323662819B19A006DE169 /* SellBookView.swift in Sources */,
 				DBE323E0281E2487006DE169 /* SettingsView.swift in Sources */,
 			);

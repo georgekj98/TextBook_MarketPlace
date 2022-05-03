@@ -15,6 +15,10 @@ struct TabControlView: View {
                 .tabItem{
                     Label("Buy book", systemImage: "book")
                 }
+            FilterView()
+                .tabItem {
+                    Label("Filter Books", systemImage: "camera.filters")
+                }
             
             SellBookView()
                 .environmentObject(signUpVM)

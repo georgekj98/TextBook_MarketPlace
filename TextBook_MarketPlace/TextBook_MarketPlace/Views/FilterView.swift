@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct FilterView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        @ObservedObject var bookStore = FilterVM()
+        var body: some View {
+            NavigationView{
+                List(bookStore.bookList, id: \.self){ book in
+                    Text(book.title)
+                }
+                .navigationTitle("Books")
+                .onAppear(){
+                    bookStore.fetchAllData()
+                }
+            }
+        }
     }
-}
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
