@@ -13,27 +13,36 @@ struct CartView: View {
     var body: some View {
         VStack{
             Text("Total: $\(cartManager.total)")
-            PaymentButton(action: {})
+            PaymentButton(action: cartManager.pay)
                 .padding()
             NavigationView{
-                
-                if cartManager.products.count > 0 {
-                    ScrollView {
-                        ForEach(cartManager.products, id: \.self){ book in
-                            //                    Text(book.title)
-                            ProductCard(product: book)
-                                .environmentObject(cartManager)
-                                .listRowSeparatorTint(.red, edges: [.top, .bottom])
-                            //                        .background(Color.black)
-                            //                    Spacer()
-                        }
-                        .background(Color.black)
-                    .navigationTitle("Cart")
-                    }
-                } else {
-                    /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+                if cartManager.paymentSuccess {
+                    Text("Thank you for your purchase")
+                        .padding()
                 }
-
+                else{
+                    if cartManager.products.count > 0 {
+                        ScrollView {
+                            ForEach(cartManager.products, id: \.self){ book in
+                                //                    Text(book.title)
+                                ProductCard(product: book)
+                                    .environmentObject(cartManager)
+                                    .listRowSeparatorTint(.red, edges: [.top, .bottom])
+                                //                        .background(Color.black)
+                                //                    Spacer()
+                            }
+                            .background(Color.black)
+                            .navigationTitle("Cart")
+                        }
+                        .onDisappear{
+                            if cartManager.paymentSuccess {
+                                cartManager.paymentSuccess = false
+                            }
+                        }
+                    } else {
+                        /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+                    }
+                }
             }
         }
     }

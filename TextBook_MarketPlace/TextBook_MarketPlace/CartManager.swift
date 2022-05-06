@@ -10,8 +10,8 @@ class CartManager: ObservableObject {
     @Published private(set) var products: [BookModel] = []
     @Published private(set) var total: Double = 0
     
-    // Payment-related variables
-//    let paymentHandler = PaymentHandler()
+//     Payment-related variables
+    let paymentHandler = PaymentHandler()
     @Published var paymentSuccess = false
     
     
@@ -27,11 +27,11 @@ class CartManager: ObservableObject {
     }
     
     // Call the startPayment function from the PaymentHandler. In the completion handler, set the paymentSuccess variable
-//    func pay() {
-//        paymentHandler.startPayment(products: products, total: total) { success in
-//            self.paymentSuccess = success
-//            self.products = []
-//            self.total = 0
-//        }
-//    }
+    func pay() {
+        paymentHandler.startPayment(products: products, total: total) { success in
+            self.paymentSuccess = success
+            self.products = []
+            self.total = 0
+        }
+    }
 }
