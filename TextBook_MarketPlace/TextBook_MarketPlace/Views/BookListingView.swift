@@ -14,14 +14,13 @@ struct BookListingView: View {
     var body: some View {
         NavigationView{
             
-//            ScrollView {
-                List(bookStore.bookList, id: \.self){ book in
-//                    Text(book.title)
+            
+            ScrollView {
+                ForEach(bookStore.bookList, id: \.self){ book in
                     ProductCard(product: book)
                         .environmentObject(cartManager)
-                        .listRowSeparatorTint(.red, edges: [.top, .bottom])
-//                        .background(Color.black)
-//                    Spacer()
+                        .listRowSeparatorTint(.red)
+                    Divider().background(Color.red)
                 }
                 .background(Color.black)
                 .navigationTitle("All Books Listing")
@@ -35,10 +34,9 @@ struct BookListingView: View {
                 })
                 .onAppear(){
                     bookStore.fetchAllData()
-                }
-//            }
+            }
+            }
         }
-//        .background(Color.black)
         
     }
 }
