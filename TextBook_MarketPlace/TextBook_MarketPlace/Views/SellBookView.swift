@@ -17,40 +17,51 @@ struct SellBookView: View {
     @EnvironmentObject var signUpVM: SignUpViewModel
     
     var body: some View {
-
+        
         NavigationView {
-            VStack(alignment: .leading, spacing: nil){
-    
-                TextField("Enter Book Title", text: $newTitle)
-                    .textFieldStyle(.roundedBorder)
-                TextField("Enter Book Price", text: $newPrice)
-                    .textFieldStyle(.roundedBorder)
-                TextField("Enter Department", text: $newDept)
-                    .textFieldStyle(.roundedBorder)
-                TextField("Enter CourseNum", text: $newCourseNum)
-                    .textFieldStyle(.roundedBorder)
-                
-                Button(action: {
-                    let book = BookModel(title: newTitle, price: Double(newPrice) ?? 0.0, department: newDept, courseCode: newCourseNum, userID: signUpVM.getUserID())
+            ZStack {
+                //                ZStack {
+//                LinearGradient(
+//                    colors: [Color.red, .black],
+//                    startPoint: .topLeading,
+//                    endPoint: .bottomTrailing
+//                )
+//                    .ignoresSafeArea(.keyboard, edges: .bottom)
+//                    .ignoresSafeArea(.container, edges: [.top, .horizontal])
+                VStack(alignment: .leading, spacing: nil){
                     
-                    bookStore.addBook(book: book)
+                    TextField("Enter Book Title", text: $newTitle)
+                        .textFieldStyle(.roundedBorder)
+                    TextField("Enter Book Price", text: $newPrice)
+                        .textFieldStyle(.roundedBorder)
+                    TextField("Enter Department", text: $newDept)
+                        .textFieldStyle(.roundedBorder)
+                    TextField("Enter CourseNum", text: $newCourseNum)
+                        .textFieldStyle(.roundedBorder)
                     
-                    newTitle = ""
-                    newPrice = ""
-                    newDept = ""
-                    newCourseNum = ""
-                }){
-                    HStack{
-                    Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .frame(width: 30, height: 30, alignment: .leading)
-                    Text("List book online")
+                    Button(action: {
+                        let book = BookModel(title: newTitle, price: Double(newPrice) ?? 0.0, department: newDept, courseCode: newCourseNum, userID: signUpVM.getUserID())
+                        
+                        bookStore.addBook(book: book)
+                        
+                        newTitle = ""
+                        newPrice = ""
+                        newDept = ""
+                        newCourseNum = ""
+                    }){
+                        HStack{
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .frame(width: 30, height: 30, alignment: .leading)
+                            Text("List book online")
+                        }
                     }
+                    .padding()
                 }
                 .padding()
+                .navigationTitle("Sell Book Online")
+                //                .foregroundColor(.primary)
             }
-            .padding()
-            .navigationTitle("Sell Book Online")
         }
     }
 }

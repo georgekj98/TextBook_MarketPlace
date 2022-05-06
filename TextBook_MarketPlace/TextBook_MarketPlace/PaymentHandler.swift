@@ -23,9 +23,10 @@ class PaymentHandler: NSObject {
     static let supportedNetworks: [PKPaymentNetwork] = [
         .visa,
         .masterCard,
+        .amex,
+        .discover
     ]
     
-    // This applePayStatus function is not used in this app. Use it to check for the ability to make payments using canMakePayments(), and check for available payment cards using canMakePayments(usingNetworks:). You can also display a custom PaymentButton according to the result. See https://developer.apple.com/documentation/passkit/apple_pay/offering_apple_pay_in_your_app under "Add the Apple Pay Button" section
     class func applePayStatus() -> (canMakePayments: Bool, canSetupCards: Bool) {
         return (PKPaymentAuthorizationController.canMakePayments(),
                 PKPaymentAuthorizationController.canMakePayments(usingNetworks: supportedNetworks))

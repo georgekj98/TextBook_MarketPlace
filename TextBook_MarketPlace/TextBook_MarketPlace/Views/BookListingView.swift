@@ -13,31 +13,47 @@ struct BookListingView: View {
     @StateObject var cartManager = CartManager()
     var body: some View {
         NavigationView{
+            ZStack {
+                LinearGradient(
+                    colors: [.black, .red],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                    .ignoresSafeArea(.keyboard, edges: .bottom)
+                    .ignoresSafeArea(.container, edges: [.top, .horizontal])
+            
+//                        }
             
             
-            ScrollView {
+            ScrollView() {
                 ForEach(bookStore.bookList, id: \.self){ book in
                     ProductCard(product: book)
+//                        .background(.regularMaterial)
                         .environmentObject(cartManager)
-                        .listRowSeparatorTint(.red)
+                        .listRowSeparatorTint(.white)
                     Divider().background(Color.red)
                 }
-                .background(Color.black)
-                .navigationTitle("All Books Listing")
+//                .background(Color.black)
+                .navigationTitle("All Listings")
+//                .font(.largeTitle)
+//                .navigationBarTitleDisplayMode(.inline)
                 .toolbar(content: {
                     NavigationLink{
                         CartView()
                             .environmentObject(cartManager)
                     }label:{
                         CartButton(numberOfProducts: cartManager.products.count)
+                            .foregroundColor(Color.white)
                     }
                 })
                 .onAppear(){
                     bookStore.fetchAllData()
             }
+//                .hiddenNavigationBarStyle()
+         
             }
         }
-        
+        }
     }
 }
 

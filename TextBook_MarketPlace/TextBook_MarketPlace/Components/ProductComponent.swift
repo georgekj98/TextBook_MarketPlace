@@ -14,20 +14,20 @@ struct ProductCard: View {
     
     var body: some View {
         HStack {
-            ZStack(alignment: .bottom) {
+//            ZStack(alignment: .bottom) {
                 
                 VStack(alignment: .leading) {
                     Text(product.title)
-                        .bold()
-                    
+//                        .bold()
+                    Text("\(product.department) \(product.courseCode)")
                     Text("\(product.price)$")
-                        .font(.caption)
+//                        .font(.caption)
                 }
                 .padding()
                 .frame(width: 180, alignment: .leading)
 //                .background(.ultraThinMaterial)
                 .cornerRadius(20)
-            }
+//            }
             .frame(width: 200, height: 80)
             .shadow(radius: 3)
             
@@ -36,12 +36,12 @@ struct ProductCard: View {
             } label: {
                 Image(systemName: "plus")
                     .padding(10)
-                    .foregroundColor(.white)
-                    .background(.green)
+                    .foregroundColor(.black)
+                    .background(.white)
                     .cornerRadius(50)
                     .padding()
             }
-        }
+        }.ignoresSafeArea()
     }
 }
 

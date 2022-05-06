@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 class CartManager: ObservableObject {
     @Published private(set) var products: [BookModel] = []
     @Published private(set) var total: Double = 0
@@ -32,6 +33,7 @@ class CartManager: ObservableObject {
             self.paymentSuccess = success
             self.products = []
             self.total = 0
+            
         }
     }
 }
