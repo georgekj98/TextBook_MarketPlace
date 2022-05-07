@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var signUpVM: SignUpViewModel
+//    @StateObject var cartManager = CartManager()
     
     var body: some View {
         NavigationView {

@@ -20,7 +20,7 @@ struct ProductCard: View {
                     Text(product.title)
 //                        .bold()
                     Text("\(product.department) \(product.courseCode)")
-                    Text("\(product.price)$")
+                    Text("Price: $ \(String(format: "%.2f", product.price))")
 //                        .font(.caption)
                 }
                 .padding()

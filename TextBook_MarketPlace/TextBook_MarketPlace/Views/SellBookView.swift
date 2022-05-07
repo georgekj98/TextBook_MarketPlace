@@ -20,14 +20,15 @@ struct SellBookView: View {
         
         NavigationView {
             ZStack {
-                //                ZStack {
+                //                                ZStack {
 //                LinearGradient(
-//                    colors: [Color.red, .black],
+//                    colors: [Color.black, .red],
 //                    startPoint: .topLeading,
 //                    endPoint: .bottomTrailing
 //                )
 //                    .ignoresSafeArea(.keyboard, edges: .bottom)
 //                    .ignoresSafeArea(.container, edges: [.top, .horizontal])
+                
                 VStack(alignment: .leading, spacing: nil){
                     
                     TextField("Enter Book Title", text: $newTitle)
@@ -55,11 +56,13 @@ struct SellBookView: View {
                                 .frame(width: 30, height: 30, alignment: .leading)
                             Text("List book online")
                         }
+                        .foregroundColor(.primary)
                     }
                     .padding()
                 }
                 .padding()
                 .navigationTitle("Sell Book Online")
+                .foregroundColor(.white)
                 //                .foregroundColor(.primary)
             }
         }

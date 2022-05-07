@@ -8,9 +8,16 @@
 import Foundation
 import SwiftUI
 class CartManager: ObservableObject {
-    @Published private(set) var products: [BookModel] = []
-    @Published private(set) var total: Double = 0
     
+    @Published var products: [BookModel] = []
+    @Published var total: Double = 0
+    
+//    @State var bookStore: BookListingVM
+//
+//    init(store: BookListingVM) {
+//        self.bookStore = store
+//    }
+//
 //     Payment-related variables
     let paymentHandler = PaymentHandler()
     @Published var paymentSuccess = false
